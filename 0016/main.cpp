@@ -13,8 +13,9 @@ int main() {
     for(cin >> d >> c >> t; d != 0 || t != 0; cin >> d >> c >> t) {
         x += d * cos(pi * theta / 180);
         y += d * sin(pi * theta / 180);
+        theta -= t;
         if(theta < 0) {
-            theta -= 360;
+            theta += 360;
         } else {
             theta %= 360;
         }
