@@ -3,4 +3,5 @@
 - C/C++
   * Introduction
     * Introduction to Programming
+    * Introduction to Algorithms and Data Structures
 - Python
