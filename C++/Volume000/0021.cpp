@@ -83,10 +83,22 @@ constexpr void sort(C& c, Pred p) { sort(ALL(c), p); }
 #define MOD (int)(1e9+7)
 #pragma endregion
 
+bool func(vector<long double> x, vector<long double> y) {
+    if ((y[1] - y[0]) * (x[3] - x[2]) == (y[3] - y[2]) * (x[1] - x[0])) return true;
+    return false;
+}
 
 int main()
 {
-    double x1, y1, x2, y2, x3, y3, x4, y4;
+    int n;
+    cin >> n;
+    vector<long double> x(4);
+    vector<long double> y(4);
+
+    while(n--) {
+        rep(i,4) cin >> x[i] >> y[i];
+        P(func(x,y) ? "YES" : "NO");
+    }
     return 0;
 }
 
